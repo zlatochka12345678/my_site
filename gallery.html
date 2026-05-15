@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Галерея - Топ-10 любимых фильмов/сериалов с описанием и трейлерами</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+ <header class="gallery-header"> 
+      <div class="header-content">
+          <h1><i class="fas fa-images"></i> Фотогалерея</h1>
+          <p class="subtitle">Коллекция изображений по теме: <span class="theme-name">Топ-10 любимых фильмов/сериалов с описанием и трейлерами</span></p>
+      </div>
+     <nav class="main-nav">
+          <ul class="nav-grid">
+             <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i>Главная</a></li>
+             <li><a href="gallery.html" class="nav-link active"><i class="fas fa-camera"></i> Галерея</a></li>
+             <li><a href="#" class="nav-link"><i class="fas fa-info-circle"></i> О проекте</a></li>
+           </ul>
+        </nav>
+    </header>
+    <main class="gallery-container">
+        <div class="controls-panel">
+            <div class="stats">
+                <span class="stat-item">
+                    <i class="fas fa-image"></i> Изображений: 
+                    <span id="image-counter">0</span>
+                </span>
+                <span class="stat-item">
+                    <i class="fas fa-heart"></i>Всего лайков: 
+                    <span id="total-likes">0</span>
+                </span>
+            </div>
+            <div class="view-controls">
+                <button id="grid-view" class="view-btn active">
+                    <i class="fas fa-th"></i> Сетка
+                </button>
+                <button id="list-view" class="view-btn">
+                    <i class="fas fa-list"></i> Список
+                </button>
+            </div>
+        </div>
+        <div class="filters">
+            <h3><i class="fas fa-filter"></i> Фильтры:</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Все</button>
+                <button class="filter-btn" data-filter="nature">Природа</button>
+                <button class="filter-btn" data-filter="city">Город</button>
+                <button class="filter-btn" data-filter="people">Люди</button>
+            </div>
+        </div>
+        <div class="gallery-grid" id="image-gallery">
+            <article class="image-card" data-category="nature">
+                <div class="card-image">
+                    <img src="image1.jpg" alt="Бегущий в лабиринте" class="gallery-img" loading="lazy">
+                </div>
+                <div class="image-overlay">
+                    <button class="like-btn" data-id="1">
+                        <i class="far fa-heart"></i>
+                        <span class="like-count">0</span>
+                    </button>
+                    <button class="zoom-btn">
+                        <i class="fas fa-expand"></i>
+                    </button>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Бегущий в лабиринте</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 15 марта 2024</p>
+                    <p class="image-description">Их главная задача выбраться из лабиринта и остаться в живых. Прекрасный цикл фильмов, советую посмотреть всем.</p>
+                    <div class="image-tags">
+                        <span class="tag">антиутопия</span>
+                        <span class="tag">лабиринт</span>
+                    </div>
+                </div>
+            </article>
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="image2.webp" alt="Сваты" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Сваты</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 20 марта  2024</p>
+                    <p class="image-description">Прекрасный сериал и очень интересный. </p>
+                    <div class="image-tags">
+                        <span class="tag">деревня</span>
+                        <span class="tag">семья</span>
+                    </div>
+                </div>
+            </article>
+            <aside class="gallery-info">
+                <h3><i class="fas fa-lightbulb"></i> ВАЖНАЯ ИНФОРМАЦИЯ!</h3>
+                <p>
+                    Все фильмы и сериалы в подборке составлены по моим личным предпочтениям.
+                </p>
+            </aside>
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="image3.webp" alt="Гарри Поттер и Принц Полукровка" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Гарри Поттер и Принц Полукровка</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 25 марта 2024</p>
+                    <p class="image-description">Ребята готовятся к турниру по Квидичу.</p>
+                    <div class="image-tags">
+                        <span class="tag">Хогвартс</span>
+                        <span class="tag">турнир</span>
+                    </div>
+                </div>
+            </article>
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="image4.webp" alt="Фишер" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Фишер</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 30 марта 2024</p>
+                    <p class="image-description">Три прекрасных следока расследуют убийство серийного маньяка.</p>
+                    <div class="image-tags">
+                        <span class="tag">город</span>
+                        <span class="tag">детектив</span>
+                    </div>
+                </div>
+            </article>
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="image5.jpg" alt="Сайлент Хилл" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Сайлент Хилл</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 1 апреля 2024</p>
+                    <p class="image-description">Стражник главной героини в фильме.</p>
+                    <div class="image-tags">
+                        <span class="tag">город</span>
+                        <span class="tag">ужасы</span>
+                    </div>
+                </div>
+            </article>
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="image6.jpg" alt="Wednesday" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Wednesday</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 5 апреля 2024</p>
+                    <p class="image-description">Главная героиня, которая спасает город от главного зла. Потрясающий сериал!</p>
+                    <div class="image-tags">
+                        <span class="tag">Невермор</span>
+                        <span class="tag">раследования</span>
+                    </div>
+                </div>
+            </article>
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="image7.webp" alt="Голодные игры" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Голодные игры</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 10 апреля 2024</p>
+                    <p class="image-description">Очень мужественная и смелая Китнес.</p>
+                    <div class="image-tags">
+                        <span class="tag">антиутопия</span>
+                        <span class="tag">контроль</span>
+                    </div>
+                </div>
+            </article>
+            <article class="image-card" data-category="city">
+                <div class="card-image">
+                    <img src="image8.jpg" alt="Ход королевы" class="gallery-img" loading="lazy">
+                    <div class="image-overlay">
+                        <button class="like-btn" data-id="2">
+                            <i class="far fa-heart"></i>
+                            <span class="like-count">0</span>
+                        </button>
+                        <button class="zoom-btn">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <h3 class="image-title">Ход королевы</h3>
+                    <p class="image-date"><i class="far fa-calendar"></i> 15 апреля 2024</p>
+                    <p class="image-description">Прекрасная девушка, победившая русского в шахматах.</p>
+                    <div class="image-tags">
+                        <span class="tag">шахматы</span>
+                        <span class="tag">сериал</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </main>
+    <footer class="gallery-footer">
+        <div class="footer-content">
+            <p>&copy; <span id="current-year">2026</span> Сухарева Злата. Все права защищены.</p>
+            <p class="js-status">JavaScript загружен и работает!</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
